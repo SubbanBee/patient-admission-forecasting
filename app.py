@@ -226,6 +226,208 @@ st.markdown(
             border-radius: 12px;
             overflow: hidden;
         }}
+
+        /* ========================================================
+           ACCESSIBILITY / CONTRAST FIX
+           Keeps the existing design but makes native Streamlit
+           text, inputs, metrics, tables, tabs and alerts readable.
+           ======================================================== */
+
+        .stApp {
+            color-scheme: light;
+            color: #0B1F33 !important;
+        }
+
+        .main .block-container,
+        .main .block-container p,
+        .main .block-container span,
+        .main .block-container label,
+        .main .block-container li,
+        .main .block-container td,
+        .main .block-container th {
+            color: #0B1F33;
+        }
+
+        .main .block-container h1,
+        .main .block-container h2,
+        .main .block-container h3,
+        .main .block-container h4,
+        .main .block-container h5,
+        .main .block-container h6 {
+            color: #0B1F33 !important;
+        }
+
+        [data-testid="stMarkdownContainer"] p,
+        [data-testid="stMarkdownContainer"] li {
+            color: #0B1F33 !important;
+        }
+
+        [data-testid="stCaptionContainer"],
+        .stCaption {
+            color: #647789 !important;
+        }
+
+        [data-testid="stMetricLabel"] *,
+        [data-testid="stMetricLabel"] {
+            color: #647789 !important;
+        }
+
+        [data-testid="stMetricValue"] *,
+        [data-testid="stMetricValue"] {
+            color: #0B1F33 !important;
+        }
+
+        [data-testid="stMetricDelta"] *,
+        [data-testid="stMetricDelta"] {
+            color: #0F766E !important;
+        }
+
+        [data-testid="stWidgetLabel"] *,
+        [data-testid="stWidgetLabel"] {
+            color: #0B1F33 !important;
+        }
+
+        .stTextInput input,
+        .stNumberInput input,
+        .stDateInput input,
+        .stTimeInput input,
+        .stSelectbox input,
+        .stMultiSelect input {
+            color: #0B1F33 !important;
+            background-color: #FFFFFF !important;
+            caret-color: #0B1F33 !important;
+        }
+
+        .stTextInput input::placeholder,
+        .stNumberInput input::placeholder,
+        .stDateInput input::placeholder,
+        .stTimeInput input::placeholder,
+        .stSelectbox input::placeholder,
+        .stMultiSelect input::placeholder {
+            color: #647789 !important;
+            opacity: 1 !important;
+        }
+
+        [data-baseweb="select"] *,
+        [data-baseweb="input"] * {
+            color: #0B1F33 !important;
+        }
+
+        [data-baseweb="select"] > div,
+        [data-baseweb="input"] > div {
+            background-color: #FFFFFF !important;
+        }
+
+        [data-baseweb="popover"] *,
+        [role="listbox"] *,
+        [role="option"] {
+            color: #0B1F33 !important;
+            background-color: #FFFFFF !important;
+        }
+
+        [data-testid="stRadio"] label *,
+        [data-testid="stCheckbox"] label *,
+        [data-testid="stRadio"] label,
+        [data-testid="stCheckbox"] label {
+            color: #0B1F33 !important;
+        }
+
+        button[data-baseweb="tab"] *,
+        button[data-baseweb="tab"] {
+            color: #0B1F33 !important;
+        }
+
+        button[data-baseweb="tab"][aria-selected="true"] * {
+            color: #0F766E !important;
+        }
+
+        [data-testid="stExpander"] summary *,
+        [data-testid="stExpander"] summary {
+            color: #0B1F33 !important;
+        }
+
+        [data-testid="stAlert"] p,
+        [data-testid="stAlert"] span,
+        [data-testid="stAlert"] div {
+            color: #0B1F33 !important;
+        }
+
+        /* Preserve the existing dark hero */
+        .hero-box,
+        .hero-box * {
+            color: white;
+        }
+
+        .hero-subtitle {
+            color: #D9EEF0 !important;
+        }
+
+        .hero-badge {
+            color: #EAF8F8 !important;
+        }
+
+        /* Preserve the existing dark sidebar */
+        section[data-testid="stSidebar"],
+        section[data-testid="stSidebar"] * {
+            color: #EAF4F8 !important;
+        }
+
+        section[data-testid="stSidebar"] .sidebar-title {
+            color: white !important;
+        }
+
+        section[data-testid="stSidebar"] .sidebar-subtitle {
+            color: #9FB6C5 !important;
+        }
+
+        section[data-testid="stSidebar"] .status-box,
+        section[data-testid="stSidebar"] .status-box * {
+            color: #EAF8F8 !important;
+        }
+
+        section[data-testid="stSidebar"] [data-testid="stCaptionContainer"],
+        section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] * {
+            color: #BFD2DC !important;
+        }
+
+        /* Preserve custom card and notice colors */
+        .metric-card,
+        .metric-card * {
+            color: #0B1F33;
+        }
+
+        .card-text {
+            color: #647789 !important;
+        }
+
+        .notice-box,
+        .notice-box * {
+            color: #624D16 !important;
+        }
+
+        /* Buttons */
+        .stButton > button {
+            color: #0B1F33 !important;
+            background-color: #FFFFFF !important;
+            border: 1px solid #DCE7ED !important;
+        }
+
+        .stButton > button:hover {
+            color: #FFFFFF !important;
+            background-color: #0F766E !important;
+            border-color: #0F766E !important;
+        }
+
+        /* Dataframe container */
+        div[data-testid="stDataFrame"] {
+            background-color: #FFFFFF !important;
+        }
+
+        /* Bordered Streamlit containers */
+        [data-testid="stVerticalBlockBorderWrapper"] {
+            color: #0B1F33;
+        }
+
     </style>
     """,
     unsafe_allow_html=True
